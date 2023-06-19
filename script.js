@@ -1362,3 +1362,74 @@
 //   // Change code above this line
 //   return totalPrice;
 // }
+
+// ============================================
+
+// // Функція filterArray(numbers, value) приймає масив чисел numbers і
+// повертає новий масив, в якому будуть тільки ті елементи оригінального масиву,
+//   які більші за значення параметра value.
+
+// // Виконай рефакторинг функції таким чином,
+// щоб замість циклу for, вона використовувала метод forEach.
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   // Change code below this line
+
+//   numbers.forEach(function (number, i, numbers) {
+//     if (numbers[i] > value) {
+//       filteredNumbers.push(numbers[i])
+//     }
+//   })
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3))
+
+// ==============================================
+// Функція getCommonElements(firstArray, secondArray)
+// приймає два масиви довільної довжини в параметри firstArray і secondArray,
+//   і повертає новий масив їхніх спільних елементів, тобто тих, які присутні в обох масивах.
+
+// Виконай рефакторинг функції таким чином, щоб замість циклу for, вона використовувала метод forEach.
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+//   // Change code below this line
+//   firstArray.forEach(function (element, i, firstArray) {
+//     if (secondArray.includes(firstArray[i])) {
+//       commonElements.push(firstArray[i])
+//     }
+//   })
+//   return commonElements;
+// }
+//   // for (let i = 0; i < firstArray.length; i += 1) {
+//   //   if (secondArray.includes(firstArray[i])) {
+//   //     commonElements.push(firstArray[i]);
+//   //   }
+//   // }
+
+  
+//   // Change code above this line
+
+// console.log(getCommonElements([1, 2, 3], [2, 4]))
+// console.log(getCommonElements([1, 2, 3], [2, 1, 17, 19]))
+
+
+// ===============================================
+// Change code below this line
+const filterArray = (numbers, value) => {
+  const filteredNumbers = [];
+
+  numbers.forEach((number) => {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+
+  // Change code above this line
+  return filteredNumbers;
+}
+console.log(filterArray([1, 2, 3, 4, 5], 3))
